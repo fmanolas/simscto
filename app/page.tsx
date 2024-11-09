@@ -133,9 +133,14 @@ export default function Home() {
                 <p
                   className={`mt-4  ${poppins.className} leading-relaxed  ${styles["text-container"]}`}
                 >
-                  <span className=" font-bold">
+                  <a
+                    href="https://solscan.io/account/GmktCoZY5qKqYuocEZy9m9fN31Paoej3AjkdoTtBYAAR"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="font-bold underline"
+                  >
                     🔗 Marketing Wallet on Solscan
-                  </span>
+                  </a>
                 </p>
                 <p
                   className={`mt-4  ${poppins.className} leading-relaxed  ${styles["text-container"]}`}
