@@ -1,101 +1,157 @@
+"use client";
+import { Orbitron, Poppins } from "next/font/google";
+import Header from "../components/Header";
+import styles from "../styles/Home.module.css";
 import Image from "next/image";
+import { useState } from "react";
+
+const orbitron = Orbitron({
+  weight: ["400", "700"],
+  subsets: ["latin"],
+  display: "swap",
+});
+
+const poppins = Poppins({
+  weight: ["400", "500"],
+  subsets: ["latin"],
+  display: "swap",
+});
 
 export default function Home() {
+  const [showWhySims, setShowWhySims] = useState(false);
+  const [showJoinUs, setShowJoinUs] = useState(false);
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-semibold">
-              app/page.tsx
-            </code>
-            .
-          </li>
-          <li>Save and see your changes instantly.</li>
-        </ol>
+    <div className={`${styles.homeBackground} ${orbitron.className}`}>
+      <Header />
+      <main className="flex flex-col items-center justify-start min-h-screen pt-32 text-center space-y-8 px-8">
+        <h1 className="text-5xl font-bold ">SIMS CTO</h1>
+        <h2 className="text-lg  mt-2">
+          Connecting the world, one SIM at a time
+        </h2>
 
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
+        <section className="text-center max-w-lg">
+          <h2 className={`text-4xl font-bold ${styles["text-container"]} `}>
+            Welcome to SIMS CTO
+          </h2>
+          <p
+            className={`mt-4  ${poppins.className} leading-relaxed  ${styles["text-container"]}`}
           >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:min-w-44"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
-        </div>
+            Welcome to the Sims Community Take-Over (CTO) hub! Here, we’re
+            building a vibrant community centered around shared creativity and
+            collective ownership. Powered by the Solana blockchain, our
+            community token empowers Sims fans to participate in events,
+            collaborate on projects, and earn rewards. Join us as we explore new
+            ways to connect, create, and play together in the Sims universe!
+          </p>
+          <div className="w-full flex justify-center">
+            <p
+              className={`mt-10 mb-10 font-bold text-2xl ${poppins.className} text-center ${styles["text-container"]} whitespace-nowrap`}
+            >
+              CA: HgJN8j5QsbSKnwkthWAbEawPkXR1vB2TrAFiujV4pump
+            </p>
+          </div>
+        </section>
+
+        {/* Flex container for Why SIMS CTO and Join Us sections */}
+        <section className="flex flex-col lg:flex-row justify-start w-full mt-16 space-x-0 lg:space-x-8">
+          {/* Why SIMS CTO Section */}
+          <div className="text-left w-full lg:w-1/2 pr-0 lg:pr-4 ">
+            <h2
+              className={`text-4xl font-bold ${styles["text-container"]} cursor-pointer`}
+              onClick={() => setShowWhySims(!showWhySims)}
+            >
+              Why SIMS CTO?
+              <span
+                className={`ml-2 transform transition-transform duration-300 ${
+                  showWhySims ? "rotate-180" : "rotate-0"
+                }`}
+              >
+                ▼
+              </span>
+            </h2>
+            {showWhySims && (
+              <div
+                className={`space-y-4 lg:space-y-6 ${styles["text-container"]}`}
+              >
+                <p className={`${poppins.className} leading-relaxed`}>
+                  Sims is a community take-over (CTO) project that was taken
+                  over after it launched on the Solana blockchain through
+                  pump.fun and the developer of it had sold his position. It
+                  bonded on to radium through a Mev bot which then crashed the
+                  chart soon after it bonded.
+                </p>
+                <p className={`${poppins.className} leading-relaxed`}>
+                  Since then, the community has rallied together to rebuild.
+                  Every day growing and learning more about what fits where, and
+                  who’s good at what. We have finally found a purpose here at
+                  SIMS CTO and I believe that purpose is to DREAM.
+                </p>
+                <p className={`${poppins.className} leading-relaxed`}>
+                  When you buy into this project, look at it like a blank
+                  canvas. You have the possibility to imagine and create
+                  whatever you can dream. We strive to support a healthy
+                  community here, and everyone’s opinions matter. Be a part of
+                  something that the blockchain has never seen before and come
+                  create history in the making.
+                </p>
+              </div>
+            )}
+          </div>
+
+          {/* Join Us Section */}
+          <div className="text-left w-full lg:w-1/2 pl-0 lg:pl-4 mt-8 lg:mt-0">
+            <h2
+              className={`text-4xl font-bold  font-orbitron  ${styles["text-container"]}`}
+              onClick={() => setShowJoinUs(!showJoinUs)}
+            >
+              Join Us in Building the Future of SIMS CTO!
+              <span
+                className={`ml-2 transform transition-transform duration-300 ${
+                  showJoinUs ? "rotate-180" : "rotate-0"
+                }`}
+              >
+                ▼
+              </span>
+            </h2>
+            {showJoinUs && (
+              <>
+                <p
+                  className={`mt-4  ${poppins.className} leading-relaxed  ${styles["text-container"]}`}
+                >
+                  Our community-driven journey is only just beginning, and your
+                  support can make all the difference! By contributing to the{" "}
+                  <span className=" font-bold">SIMS Marketing Wallet</span>,
+                  you’re helping fuel our mission of transparency, inclusivity,
+                  and empowerment within the decentralized finance space.
+                </p>
+                <p
+                  className={`mt-4  ${poppins.className} leading-relaxed  ${styles["text-container"]}`}
+                >
+                  Every contribution—big or small—goes directly towards
+                  initiatives that strengthen our community, spread awareness,
+                  and showcase the unique value of SIMS CTO to the world.
+                </p>
+                <p
+                  className={`mt-4  ${poppins.className} leading-relaxed  ${styles["text-container"]}`}
+                >
+                  <span className=" font-bold">
+                    🔗 Marketing Wallet on Solscan
+                  </span>
+                </p>
+                <p
+                  className={`mt-4  ${poppins.className} leading-relaxed  ${styles["text-container"]}`}
+                >
+                  If you have any questions, ideas, or want to share how you’d
+                  like to support, please feel free to reach out to us at{" "}
+                  <span className=" font-bold">ctosimz@gmail.com</span>.
+                  Together, let’s continue building a thriving, inclusive
+                  community! 💪 🌐 ✨
+                </p>
+              </>
+            )}
+          </div>
+        </section>
       </main>
-      <footer className="row-start-3 flex gap-6 flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
     </div>
   );
 }
