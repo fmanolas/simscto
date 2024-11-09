@@ -103,8 +103,8 @@ export default function Whitepaper() {
             SIMS operates on a community-driven governance model. Key decisions
             are made through community voting, ensuring that the direction of
             the project aligns with the collective will of the members. This
-            model provides each member with a stake in SIMS's future,
-            reinforcing the project’s commitment to transparency and
+            model provides each member with a stake in SIMS&rsquo;s future,
+            reinforcing the project&rsquo;s commitment to transparency and
             inclusivity.
           </p>
           <h3 className={`text-3xl font-semibold mt-4  ${orbitron.className} `}>
@@ -128,7 +128,7 @@ export default function Whitepaper() {
             4.1 Multi-Signature Wallets
           </h3>
           <p className={`leading-relaxed mt-2 text-lg  ${poppins.className} `}>
-            Financial security is critical to SIMS's integrity. After
+            Financial security is critical to SIMS&rsquo;s integrity. After
             experiencing prior security challenges, the team has implemented a
             multi-signature wallet to safeguard community funds. This wallet
             requires approval from multiple trusted signers, ensuring that funds
@@ -144,8 +144,8 @@ export default function Whitepaper() {
             SIMS leadership took decisive steps to restore integrity. A new
             wallet was created, secured by reliable, community-trusted signers,
             and funded to demonstrate a renewed commitment to security. This act
-            of transparency and accountability is central to SIMS's pledge to
-            protect community assets and reinforce the trust of its members.
+            of transparency and accountability is central to SIMS&rsquo;s pledge
+            to protect community assets and reinforce the trust of its members.
           </p>
         </section>
         <section className="mt-8">
@@ -163,17 +163,17 @@ export default function Whitepaper() {
           </h3>
           <p className={`leading-relaxed mt-2 text-lg  ${poppins.className} `}>
             All branding assets, including banners, Twitter content, and bot
-            interactions, are updated to align with SIMS's values and avoid
-            copyright issues. This refresh symbolizes a clean, unified vision
-            for the project.
+            interactions, are updated to align with SIMS&rsquo;s values and
+            avoid copyright issues. This refresh symbolizes a clean, unified
+            vision for the project.
           </p>
           <h3 className={`text-3xl font-semibold mt-4  ${orbitron.className} `}>
             5.2 Community Storytelling
           </h3>
           <p className={`leading-relaxed mt-2 text-lg  ${poppins.className} `}>
             SIMS has created a unique lore that resonates with its members. For
-            instance, the initial "50 SOL buy and burn" story serves as a
-            rallying point, encouraging new participants to contribute. The
+            instance, the initial &ldquo;50 SOL buy and burn&rdquo; story serves
+            as a rallying point, encouraging new participants to contribute. The
             narrative centers on the shared journey and trials that the
             community has faced and overcome, fostering a sense of unity and
             purpose.
@@ -225,8 +225,8 @@ export default function Whitepaper() {
                   Community-Impact Initiatives:
                 </span>{" "}
                 Use funds from the marketing wallet to support local causes
-                chosen by the community, showcasing SIMS's commitment to social
-                impact.
+                chosen by the community, showcasing SIMS&rsquo;s commitment to
+                social impact.
               </li>
               <li>
                 <span className="font-semibold ">Global Expansion:</span>{" "}
@@ -268,11 +268,11 @@ export default function Whitepaper() {
           </h2>
           <p className={`leading-relaxed mt-4 text-lg ${poppins.className}`}>
             TThe SIMS project is no stranger to adversity. Past challenges have
-            tested the community's resilience, leading to the creation of a
-            security-enhanced, multi-signature wallet and renewed pledges from
-            leadership. These experiences have reinforced SIMS's commitment to
-            integrity, inspiring the community to continue building and
-            adapting.
+            tested the community&rsquo;s resilience, leading to the creation of
+            a security-enhanced, multi-signature wallet and renewed pledges from
+            leadership. These experiences have reinforced SIMS&rsquo;s
+            commitment to integrity, inspiring the community to continue
+            building and adapting.
           </p>
         </section>
 
@@ -508,7 +508,7 @@ export default function Whitepaper() {
           </p>
           <p className={`leading-relaxed mt-4 text-lg  ${poppins.className}`}>
             <strong className={``}>
-              No Affiliation with "The Sims" Game or EA:
+              No Affiliation with &ldquo;The Sims&rdquo; Game or EA:
             </strong>{" "}
             SIMS CTO Meme Coin is not affiliated with, endorsed by, or connected
             to The Sims video game, its publisher Electronic Arts (EA), or any
