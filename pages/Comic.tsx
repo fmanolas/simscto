@@ -2,8 +2,6 @@
 
 import { useState } from "react";
 import Image from "next/image";
-import styles from "../styles/Home.module.css";
-import { useRouter } from "next/navigation";
 
 import image1 from "/public/comic1.jpg";
 import image2 from "/public/comic2.jpg";
@@ -26,7 +24,6 @@ const orbitron = Orbitron({
 });
 export default function Comic() {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
-  const router = useRouter();
 
   const handleNext = () => {
     setCurrentImageIndex((prevIndex) =>
