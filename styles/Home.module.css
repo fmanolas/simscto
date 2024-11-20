@@ -10,9 +10,12 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  z-index: -1; /* Ensure it's behind other elements */
+  position: fixed; /* Fix it to the viewport */
+  top: 0;
+  left: 0;
   transition: opacity 0.5s ease-in-out;
 }
-
 
 .text-simsGreen {
   color: #34c759; /* Adjust this color to your preferred neon green */

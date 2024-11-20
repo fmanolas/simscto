@@ -34,7 +34,9 @@ export default function Header() {
         >
           Meme Generator
         </Link>
-
+        <Link href="/Comic" className="hover:underline">
+          Comic
+        </Link>
         <div className="flex space-x-4 items-center">
           <a
             href="https://t.me/SIMSCTOSOL"
